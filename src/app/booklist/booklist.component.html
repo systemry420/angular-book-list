@@ -1,0 +1,11 @@
+<div *ngIf="0; then emptyBlock; else booksBlock">
+  <h1>Books List</h1>
+</div>
+
+<div class="empty" #emptyBlock>
+    <h3>You don't have books to read right now!</h3>
+</div>
+
+<ul class="book-list" #booksBlock>
+
+</ul>
