@@ -1,9 +1,12 @@
 <form>
-  <input required placeholder="Enter book title"
+  <input
+      required
+      placeholder="Enter book title"
       name="title"
       type="text"
       value=""
       autoComplete="off"
+      [(ngModel)] = "title"
       />
 
   <input
@@ -13,6 +16,7 @@
       type="text"
       value=""
       autoComplete="off"
+      [(ngModel)] = 'author'
   />
-  <button>Add book</button>
+  <button (click)="submitBook()">Add book</button>
 </form>

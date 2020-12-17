@@ -6,6 +6,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BooklistComponent } from './booklist/booklist.component';
 import { BookformComponent } from './bookform/bookform.component';
 import { BookService } from './book.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BookService } from './book.service';
     BookformComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

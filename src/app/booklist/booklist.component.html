@@ -2,7 +2,7 @@
   Books List
 </h1>
 
-<ng-template *ngIf="books.length == 0; then emptyBlock; else booksBlock">
+<ng-template *ngIf=" books.length == 0; then emptyBlock; else booksBlock">
 </ng-template>
 
 <ng-template #emptyBlock>
@@ -13,9 +13,9 @@
 
 <ng-template #booksBlock>
   <ul class="book-list">
-    <li >
-      <div class="title">title</div>
-      <div class="author">author</div>
+    <li *ngFor="let book of books">
+      <div class="title">{{book.title}}</div>
+      <div class="author">{{book.author}}</div>
     </li>
   </ul>
 </ng-template>
