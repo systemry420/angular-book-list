@@ -1,11 +1,21 @@
-<div *ngIf="0; then emptyBlock; else booksBlock">
-  <h1>Books List</h1>
-</div>
+<h1 style="text-align: center; color: aliceblue; margin-top: 1em;">
+  Books List
+</h1>
 
-<div class="empty" #emptyBlock>
-    <h3>You don't have books to read right now!</h3>
-</div>
+<ng-template *ngIf="books.length == 0; then emptyBlock; else booksBlock">
+</ng-template>
 
-<ul class="book-list" #booksBlock>
+<ng-template #emptyBlock>
+  <div class="empty">
+      <h3>You don't have books to read right now!</h3>
+  </div>
+</ng-template>
 
-</ul>
+<ng-template #booksBlock>
+  <ul class="book-list">
+    <li >
+      <div class="title">title</div>
+      <div class="author">author</div>
+    </li>
+  </ul>
+</ng-template>
