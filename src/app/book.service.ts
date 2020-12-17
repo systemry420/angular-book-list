@@ -18,4 +18,10 @@ export class BookService {
     this.books.push({title, author, id:3})
 
   }
+
+  deleteBook(id) {
+    this.books = this.books.filter(b => {
+      return b.id != id
+    })
+  }
 }

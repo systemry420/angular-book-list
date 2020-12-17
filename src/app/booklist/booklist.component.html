@@ -14,8 +14,11 @@
 <ng-template #booksBlock>
   <ul class="book-list">
     <li *ngFor="let book of books">
-      <div class="title">{{book.title}}</div>
-      <div class="author">{{book.author}}</div>
+      <div class="info">
+        <div class="title">{{book.title}}</div>
+        <div class="author">{{book.author}}</div>
+      </div>
+      <div class="remove" [id]="book.id" (click)="deleteBook($event)">X</div>
     </li>
   </ul>
 </ng-template>

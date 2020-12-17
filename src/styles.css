@@ -40,11 +40,18 @@ body {
   margin: 5px 0;
   padding: 1em 3em;
   background-color: rgb(65, 0, 65);
+  display: flex;
+  justify-content: space-between;
 }
 
-.book-list li:hover {
+.remove {
   cursor: pointer;
-  opacity: .7;
+  color: #ddd;
+  align-self: center;
+  padding: 0.6em;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-color: rgb(49, 0, 49);
 }
 
 .title {
